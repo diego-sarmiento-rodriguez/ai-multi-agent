@@ -1,0 +1,66 @@
+# =========================
+# 🐍 Python
+# =========================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+
+# Entornos virtuales
+venv/
+env/
+.venv/
+
+# =========================
+# 🔐 Variables de entorno
+# =========================
+.env
+.env.*
+
+# =========================
+# 📦 Dependencias
+# =========================
+pip-wheel-metadata/
+*.egg-info/
+dist/
+build/
+
+# =========================
+# 🤖 IA / embeddings / FAISS / LangChain
+# =========================
+faiss_index/
+*.faiss
+*.pkl
+*.pickle
+vectorstore/
+chroma/
+chroma_db/
+
+# caches de modelos / embeddings
+.cache/
+.huggingface/
+transformers_cache/
+
+# =========================
+# 📊 Logs
+# =========================
+*.log
+logs/
+
+# =========================
+# 💻 VS Code
+# =========================
+.vscode/
+*.code-workspace
+
+# =========================
+# 🧠 Jupyter (si usas notebooks)
+# =========================
+.ipynb_checkpoints/
+
+# =========================
+# 🖥️ Sistema operativo
+# =========================
+.DS_Store
+Thumbs.db
