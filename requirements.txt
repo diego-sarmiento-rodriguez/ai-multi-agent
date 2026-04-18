@@ -5,3 +5,5 @@ langgraph
 faiss-cpu
 groq
 python-dotenv
+langchain-community
+numpy
