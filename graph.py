@@ -5,7 +5,7 @@ from router import route_decision
 
 
 def run_general(state):
-    session_id = state.get("session_id", "default")  # 👈 seguro
+    session_id = state.get("session_id", "default")  #  seguro
     response = rag_agent(state["input"], session_id)
 
     return {
@@ -16,7 +16,7 @@ def run_general(state):
 
 
 def run_rag(state):
-    session_id = state.get("session_id", "default")  # 👈 seguro
+    session_id = state.get("session_id", "default")  #  seguro
     response = rag_agent(state["input"], session_id)
 
     return {
@@ -30,7 +30,7 @@ graph = StateGraph(dict)
 graph.add_node("general_agent", run_general)
 graph.add_node("rag_agent", run_rag)
 
-# 👇 IMPORTANTE: usar START implícito correctamente
+#  IMPORTANTE: usar START implícito correctamente
 
 graph.add_conditional_edges(
     "__start__",
@@ -42,7 +42,7 @@ graph.add_conditional_edges(
 )
 
 
-# 👇 FINES CLAROS (no paralelos)
+#  FINES CLAROS (no paralelos)
 graph.set_finish_point("general_agent")
 graph.set_finish_point("rag_agent")
 

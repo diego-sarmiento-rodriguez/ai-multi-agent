@@ -6,7 +6,7 @@ api = FastAPI()
 
 @api.get("/")
 def root():
-    return {"message": "Multi-agent API running 🚀"}
+    return {"message": "Multi-agent API running"}
 
 
 @api.get("/ask")
@@ -28,7 +28,7 @@ def favicon():
 def ask(q: str, session_id: str = "default"):
     result = app_graph.invoke({
         "input": q,
-        "session_id": session_id  # 👈 CLAVE
+        "session_id": session_id  # session usuario
     })
 
     return {

@@ -4,7 +4,7 @@ from semantic_memory import save_memory, retrieve_memory
 
 
 def general_agent(query, session_id):
-    # 🔥 memoria semántica
+    #  memoria semántica
     memory_context = retrieve_memory(session_id, query)
 
     prompt = f"""
@@ -19,7 +19,7 @@ def general_agent(query, session_id):
 
     response = call_llm(prompt)
 
-    # 🔥 guardar en memoria semántica
+    #  guardar en memoria semántica
     save_memory(session_id, "user", query)
     save_memory(session_id, "assistant", response)
 
@@ -29,7 +29,7 @@ def general_agent(query, session_id):
 def rag_agent(query, session_id):
     context = get_context(query)
 
-    # 🔥 memoria semántica
+    #  memoria semántica
     memory_context = retrieve_memory(session_id, query)
 
     prompt = f"""
@@ -47,7 +47,7 @@ def rag_agent(query, session_id):
 
     response = call_llm(prompt)
 
-    # 🔥 guardar memoria
+    #  guardar memoria
     save_memory(session_id, "user", query)
     save_memory(session_id, "assistant", response)
 
